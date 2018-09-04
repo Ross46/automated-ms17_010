@@ -10,4 +10,10 @@ Any contributions are welcome.
 
 The code is still buggy
 
+chmod +x all sh files
+
+./start.sh gets the code to work
+
+default interface is set as wlan0 . You can change it to eth0 in start.sh
+
 Happy Hacking
