@@ -1,0 +1,11 @@
+[0m[1m[31m[-][0m Auxiliary failed: Msf::OptionValidateError The following options failed to validate: RHOSTS.
+[0m[1m[32m[+][0m 10.4.160.130:445      - Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7601 Service Pack 1 x64 (64-bit)
+[1m[32m[+][0m 10.4.160.174:445      - Host is likely VULNERABLE to MS17-010! - Windows 7 Ultimate 7600 x64 (64-bit)
+[1m[32m[+][0m 10.4.161.168:445      - Host is likely VULNERABLE to MS17-010! - Windows 8.1 Pro 9600 x64 (64-bit)
+[1m[32m[+][0m 10.4.162.159:445      - Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7601 Service Pack 1 x64 (64-bit)
+[1m[32m[+][0m 10.4.162.222:445      - Host is likely VULNERABLE to MS17-010! - Windows 7 Ultimate 7600 x86 (32-bit)
+[1m[32m[+][0m 10.4.162.56:445       - Host is likely VULNERABLE to MS17-010! - Windows 8 Pro 9200 x86 (32-bit)
+[1m[32m[+][0m 10.4.163.13:445       - Host is likely VULNERABLE to MS17-010! - Windows 8 Single Language 9200 x64 (64-bit)
+[1m[32m[+][0m 10.4.163.165:445      - Host is likely VULNERABLE to MS17-010! - Windows 7 Ultimate 7600 x64 (64-bit)
+[1m[32m[+][0m 10.4.166.212:445      - Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7600 x64 (64-bit)
+[1m[32m[+][0m 10.4.175.189:445      - Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7601 Service Pack 1 x64 (64-bit)
