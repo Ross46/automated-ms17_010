@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "FILES IN DATA FOLDER WILL BE DELETED EVERY TIME YOU RUN THIS COMMAND PLEASE MAKE A BACKUP OF THE DATA IF ANY"
 rm ../data/*
 echo "ARP-SCAN STARTED"
 arp-scan -l -i 50 -g --interface=wlan0 -r 1 > ../data/clientlist.txt
