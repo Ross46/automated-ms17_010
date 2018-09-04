@@ -1,0 +1,6 @@
+spool ../data/msf.txt
+use auxiliary/scanner/smb/smb_ms17_010
+set rhosts file:../data/openport.txt
+run
+exit
+spool off
