@@ -1,4 +1,6 @@
 #!/bin/bash
+rm ../data/*
+rmdir ../data
 mkdir ../data
 echo "ARP-SCAN STARTED"
 arp-scan -l -i 50 -g --interface=wlan0 -r 1 > ../data/clientlist.txt
