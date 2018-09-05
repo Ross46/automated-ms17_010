@@ -15,7 +15,7 @@ t="r0.txt"
 j=1
 for((i=7;i<=h;i+=8))
 do
-dd=": $(cat arpscan_ip_mac.txt | grep $(cat ip.txt | head -$j | tail -1 ))"
+dd=": (cat arpscan_ip_mac.txt | grep -w $( sed ${j}!d ip.txt))"
 y="r$i.txt"
 sed -e "${i}s/.*/IP and MAC      ${dd}/ " $t>$y
 rm $t
