@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "**HOSTS AVAILABLE ON NETWORK**">arpscan_ip_mac.txt
+echo "***HOSTS AVAILABLE ON NETWORK***">arpscan_ip_mac.txt
 date>>arpscan_ip_mac.txt
 echo " ">>arpscan_ip_mac.txt
 echo "     IP                MAC">>arpscan_ip_mac.txt
