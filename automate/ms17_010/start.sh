@@ -3,7 +3,22 @@ echo "FILES IN DATA AND REPORT FOLDER WILL BE DELETED EVERY TIME YOU RUN THIS CO
 rm ../data/*
 rm ../report/*.txt
 echo "ARP-SCAN STARTED"
-arp-scan -l -i 50 -g --interface=wlan0 -r 1 > ../data/clientlist.txt
+flag=1
+fire=1
+echo "#!/bin/bash">bypass.sh
+echo "arp-scan --interface=wlan0 --localnet -g -r 1 2>error.txt" >> bypass.sh
+while(($flag==1)); do
+./bypass.sh > ../data/clientlist.txt
+c=$(wc -l <error.txt)
+if(($c>0));then
+flag=1
+fire=$((fire*10))
+echo "#!/bin/bash" > bypass.sh
+echo "arp-scan -l -g -r 1 -i $fire 2>error.txt">>bypass.sh
+else
+flag=0
+fi
+done
 echo "ARP-SCAN COMPLETED"
 sed '1d;2d;/packets/d;/^$/d;$d;s/\s.*$//' ../data/clientlist.txt > ../data/refined.txt
 echo "NMAP STARTED"
