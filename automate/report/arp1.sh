@@ -49,9 +49,7 @@ sed 's/Host: //' ../data/port.txt > t.txt
 sed 's/(.*//' t.txt > port_ip1.txt
 sed '1d;2d;$d' port_ip1.txt > port_ip2.txt
 sed 'n; d' port_ip2.txt > k.txt
-rm port_ip1.txt
-rm t.txt
-rm port_ip2.txt
+rm port_ip1.txt t.txt port_ip2.txt
 for((i=1;i<d;i++))
  do
    data1=$(sed -n "$i"p k.txt);
@@ -66,10 +64,7 @@ for((i=1;i<d;i++))
     echo " 445  filtered     $data1">>finalport.txt
    fi
  done
-rm k.txt
-rm x.txt
-rm l.txt
-rm temp.txt
+rm k.txt x.txt l.txt temp.txt
 echo "                  VULNERABILITY SCAN REPORT                      ">finalmsf.txt
 b=`date`
 echo "                 $b                         ">>finalmsf.txt
@@ -81,10 +76,7 @@ sed '$d' msf1.txt>msf2.txt
 sed '$d' msf2.txt>msf3.txt
 sed '$d' msf3.txt>msf4.txt
 sed '/Scanned/d' ./msf4.txt>msf5.txt
-rm msf1.txt
-rm msf2.txt
-rm msf3.txt
-rm msf4.txt
+rm msf1.txt msf2.txt msf3.txt msf4.txt
 grep -o '0m .*445' msf5.txt>msf6.txt
 grep -o ' .*:' msf6.txt>msf7.txt
 sed 's/.$//' msf7.txt>msf8.txt
@@ -96,8 +88,7 @@ for((i=1;i<=y;i++))
  do
 opera[i]=$(sed -n "$i"p os.txt);
  done
-rm msf6.txt
-rm msf7.txt
+rm msf6.txt msf7.txt
 q=1;
 for((i=1;i<=t;i++))
  do
@@ -114,12 +105,7 @@ for((i=1;i<=t;i++))
     echo " Not vulnerable  445      $data2       $data3      Unknown">>finalmsf.txt
    fi
  done
-rm msf5.txt
-rm os.txt
-rm l.txt
-rm msf8.txt
-rm d.txt
-rm arpscan_ip.txt
+rm msf5.txt os.txt l.txt msf8.txt d.txt arpscan_ip.txt
 ./print1.sh
 exit
 
