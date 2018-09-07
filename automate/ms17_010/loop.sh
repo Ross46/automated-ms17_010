@@ -10,6 +10,7 @@ R=$(<target.txt);
 sed -i '3s/.*/set rhost '$R' /' automsfe.rc
 msfconsole -q -r  ../ms17_010/automsfe.rc
 done
+rm spoofip.txt target.txt
 exit
 
 
